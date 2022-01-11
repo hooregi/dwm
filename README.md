@@ -11,6 +11,7 @@ The upstream development for `dwm` can be found [here](https://git.suckless.org/
 - [fullscreen](https://dwm.suckless.org/patches/actualfullscreen/)
 - [gaps](https://dwm.suckless.org/patches/vanitygaps/)
 - [shiftview](https://dwm.suckless.org/patches/nextprev/)
+- [stacker](https://dwm.suckless.org/patches/stacker/)
 - [statuscmd](https://dwm.suckless.org/patches/statuscmd/)
 - [swallow](https://dwm.suckless.org/patches/swallow/)
 - [xresources](https://dwm.suckless.org/patches/xresources/)
