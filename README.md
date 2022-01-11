@@ -14,6 +14,7 @@ The upstream development for `dwm` can be found [here](https://git.suckless.org/
 - [stacker](https://dwm.suckless.org/patches/stacker/)
 - [statuscmd](https://dwm.suckless.org/patches/statuscmd/)
 - [swallow](https://dwm.suckless.org/patches/swallow/)
+- [vacant tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
 - [xresources](https://dwm.suckless.org/patches/xresources/)
 
 # Arch Linux Install
