@@ -8,9 +8,9 @@ The upstream development for `dwm` can be found [here](https://git.suckless.org/
 
 # Patches
 
-- [alpha](https://dwm.suckless.org/patches/alpha/)
 - [fullscreen](https://dwm.suckless.org/patches/actualfullscreen/)
 - [gaps](https://dwm.suckless.org/patches/vanitygaps/)
+- [shiftview](https://dwm.suckless.org/patches/nextprev/)
 - [statuscmd](https://dwm.suckless.org/patches/statuscmd/)
 - [swallow](https://dwm.suckless.org/patches/swallow/)
 - [xresources](https://dwm.suckless.org/patches/xresources/)
