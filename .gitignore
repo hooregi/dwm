@@ -1,4 +1,5 @@
 patches/
 *.o
+config.def.h
 dwm
 stest
