@@ -10,7 +10,7 @@ static unsigned int gappov = 6;
 static const int smartgaps = 1; // 0 is no smartgaps
 static int showbar = 1; // 0 is no bar
 static int topbar = 1; // 0 is bottom bar
-static char *fonts[] = { "FiraCode Nerd Font:size=16:antialias=true:autohint=true" };
+static char *fonts[] = { "FiraCode Nerd Font:size=14:antialias=true:autohint=true" };
 static char normbgcolor[] = "#222222";
 static char normbordercolor[] = "#444444";
 static char normfgcolor[] = "#bbbbbb";
