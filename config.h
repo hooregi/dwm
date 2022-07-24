@@ -129,7 +129,7 @@ static Key keys[] = {
   { MODKEY|ShiftMask, XK_r, spawn, SHCMD("$TERMINAL -e gotop") },
   { MODKEY, XK_e, spawn, SHCMD("$TERMINAL -e neomutt; pkill -RTMIN+12 dwmblocks") },
   { MODKEY, XK_n, spawn, SHCMD("$TERMINAL -e newsboat") },
-  { MODKEY, XK_m, spawn, SHCMD("ncspot") },
+  { MODKEY, XK_m, spawn, SHCMD("$TERMINAL -e ncspot") },
   { MODKEY, XK_a, spawn, SHCMD("$TERMINAL -e pulsemixer; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_Calculator, spawn, SHCMD("$TERMINAL -e bc -l") },
   { MODKEY|ShiftMask, XK_w, spawn, SHCMD("$BROWSER") },
