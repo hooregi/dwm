@@ -36,7 +36,7 @@ sudo pacman -U *.pkg.tar.zst
 Download the source code from this repository:
 
 ```
-git clone https://gitlab.com/Hooregi/dwm.git
+git clone https://github.com/hooregi/dwm.git
 cd dwm
 sudo make clean install
 ```
