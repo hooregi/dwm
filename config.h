@@ -10,7 +10,7 @@ static unsigned int gappov = 6;
 static const int smartgaps = 1; // 0 is no smartgaps
 static int showbar = 1; // 0 is no bar
 static int topbar = 1; // 0 is bottom bar
-static char *fonts[] = { "FiraCode Nerd Font:size=14:antialias=true:autohint=true" };
+static char *fonts[] = { "FiraCode Nerd Font:size=13:antialias=true:autohint=true" };
 static char normbgcolor[] = "#222222";
 static char normbordercolor[] = "#444444";
 static char normfgcolor[] = "#bbbbbb";
@@ -117,10 +117,10 @@ static Key keys[] = {
 	{ MODKEY, XK_d, spawn, SHCMD("dmenu_recency") },
 	{ MODKEY, XK_q, killclient, {0} },
   { MODKEY|ShiftMask, XK_e, quit, {0} },
-	{ 0, XF86XK_MonBrightnessUp, spawn, SHCMD("xbacklight -inc 15") },
-  { MODKEY, XK_F12, spawn, SHCMD("sct") },
-	{ 0, XF86XK_MonBrightnessDown, spawn, SHCMD("xbacklight -dec 15") },
-  { MODKEY, XK_F11, spawn, SHCMD("sct 2700") },
+	{ 0, XF86XK_MonBrightnessUp, spawn, SHCMD("brightnessctl set +10%") },
+  { MODKEY, XK_F6, spawn, SHCMD("sct") },
+	{ 0, XF86XK_MonBrightnessDown, spawn, SHCMD("brightnessctl set 10%-") },
+  { MODKEY, XK_F5, spawn, SHCMD("sct 2700") },
 
   // launch programs
 	{ MODKEY, XK_Return, spawn, SHCMD("$TERMINAL") },
@@ -136,21 +136,16 @@ static Key keys[] = {
 
   // launch scripts
   { MODKEY, XK_w, spawn, SHCMD("dmenu_network") },
-  { MODKEY, XK_F7, spawn, SHCMD("dmenu_blue") },
-  { MODKEY, XK_F8, spawn, SHCMD("dmenu_display") },
-  { MODKEY, XK_F9, spawn, SHCMD("dmenu_mount") },
-  { MODKEY|ShiftMask, XK_F9, spawn, SHCMD("dmenu_unmount") },
+  { MODKEY, XK_F8, spawn, SHCMD("dmenu_blue") },
+  { MODKEY, XK_F7, spawn, SHCMD("dmenu_display") },
+  { MODKEY, XK_F11, spawn, SHCMD("dmenu_mount") },
+  { MODKEY|ShiftMask, XK_F11, spawn, SHCMD("dmenu_unmount") },
   { MODKEY, XK_Print,  spawn, SHCMD("dmenu_record") },
   { MODKEY, XK_Insert, spawn, SHCMD("getqr") },
   { MODKEY, XK_Delete, spawn, SHCMD("dmenu_record kill") },
   { 0, XK_Print, spawn, SHCMD("dmenu_maim") },
 
   // multimedia
-	{ MODKEY|ShiftMask, XK_m, spawn, SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY, XK_minus, spawn,	SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY|ShiftMask, XK_minus, spawn,	SHCMD("pamixer --allow-boost -d 15; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY, XK_equal, spawn, SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY|ShiftMask, XK_equal, spawn, SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioMute, spawn, SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioLowerVolume, spawn,	SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
@@ -158,7 +153,7 @@ static Key keys[] = {
   { MODKEY, XK_comma, spawn, SHCMD("playerctl -p ncspot,spotify,mpv,%any previous") },
   { MODKEY, XK_period, spawn, SHCMD("playerctl -p ncspot,spotify,mpv,%any next") },
 	{ 0, XF86XK_AudioPlay, spawn, SHCMD("playerctl -p ncspot,spotify,mpv,%any play-pause") },
-	{ 0, XF86XK_AudioPause, spawn,SHCMD("playerctl -p ncspot,spotify,mpv,%any play-pause") },
+	{ 0, XF86XK_AudioStop, spawn,SHCMD("playerctl -p ncspot,spotify,mpv,%any pause") },
 	{ 0, XF86XK_AudioPrev, spawn, SHCMD("playerctl -p ncspot,spotify,mpv,%any previous") },
   { 0, XF86XK_AudioNext, spawn, SHCMD("playerctl -p ncspot,spotify,mpv,%any next") },
 
