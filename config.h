@@ -28,18 +28,9 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	// class, instance, title, tags mask, isfloating, isterminal, noswallow, monitor
-	{ "libreoffice", NULL, NULL, 1 << 6, 0, 0, 0, -1 },
-	{ "soffice", NULL, NULL, 1 << 6, 0, 0, 0, -1 },
 	{ "Gimp", NULL, NULL, 1 << 7, 0, 0, 0, -1 },
 	{ "inkscape", NULL, NULL, 1 << 7, 0, 0, 0, -1 },
-	{ "kdenlive", NULL, NULL, 1 << 7, 0, 0, 0, -1 },
-	{ "obs", NULL, NULL, 1 << 8, 0, 0, 0, -1 },
 	{ "zoom", NULL, NULL, 1 << 8, 0, 0, 0, -1 },
-  { "Discord", NULL, NULL, 1 << 8, 0, 0, 0, -1 },
-	{ "Spotify", NULL, NULL, 1 << 8, 0, 1, 0, -1 },
-	{ "mpv", NULL, NULL, 1 << 9, 0, 0, 0, -1 },
-	{ "Element-nightly", NULL, NULL, 1 << 9, 0, 0, 0, -1 },
-	{ "St", NULL, NULL, 0, 0, 1, 0, -1 },
 };
 
 // Layouts
@@ -75,18 +66,18 @@ static const Layout layouts[] = {
 // Xresources preferences to load at startup
 ResourcePref resources[] = {
   { "color0", STRING, &normbordercolor },
-	{ "color10", STRING, &selbordercolor },
-	{ "color0", STRING, &normbgcolor },
-	{ "color8", STRING, &normfgcolor },
-	{ "color0", STRING, &selfgcolor },
-	{ "color8", STRING, &selbgcolor },
-	{ "borderpx", INTEGER, &borderpx },
-	{ "snap", INTEGER, &snap },
-	{ "showbar", INTEGER, &showbar },
-	{ "topbar", INTEGER, &topbar },
-	{ "nmaster", INTEGER, &nmaster },
-	{ "resizehints", INTEGER, &resizehints },
-	{ "mfact", FLOAT, &mfact },
+  { "color10", STRING, &selbordercolor },
+  { "color0", STRING, &normbgcolor },
+  { "color8", STRING, &normfgcolor },
+  { "color0", STRING, &selfgcolor },
+  { "color8", STRING, &selbgcolor },
+  { "borderpx", INTEGER, &borderpx },
+  { "snap", INTEGER, &snap },
+  { "showbar", INTEGER, &showbar },
+  { "topbar", INTEGER, &topbar },
+  { "nmaster", INTEGER, &nmaster },
+  { "resizehints", INTEGER, &resizehints },
+  { "mfact", FLOAT, &mfact },
 };
 
 // commands when clicking statusbar
@@ -149,11 +140,7 @@ static Key keys[] = {
 	{ 0, XF86XK_AudioMute, spawn, SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioLowerVolume, spawn,	SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
-  { MODKEY, XK_p, spawn, SHCMD("playerctl -p ncspot,spotify,mpv,%any play-pause") },
-  { MODKEY, XK_comma, spawn, SHCMD("playerctl -p ncspot,spotify,mpv,%any previous") },
-  { MODKEY, XK_period, spawn, SHCMD("playerctl -p ncspot,spotify,mpv,%any next") },
 	{ 0, XF86XK_AudioPlay, spawn, SHCMD("playerctl -p ncspot,spotify,mpv,%any play-pause") },
-	{ 0, XF86XK_AudioStop, spawn,SHCMD("playerctl -p ncspot,spotify,mpv,%any pause") },
 	{ 0, XF86XK_AudioPrev, spawn, SHCMD("playerctl -p ncspot,spotify,mpv,%any previous") },
   { 0, XF86XK_AudioNext, spawn, SHCMD("playerctl -p ncspot,spotify,mpv,%any next") },
 
